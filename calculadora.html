@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="calculadora">
+        <div class="resultado">
+            <input type="text" id="outVisor" readonly value="0">
+        </div>
+        <div class="teclas">
+            <button class="command" onclick="calcularResultado('%')">%</button>
+            <button class="command" onclick="limparTudo()">CE</button>
+            <button class="command" onclick="limparVisor()">C</button>
+            <button class="command" onclick="apagarCaractere()">⌫</button>
+        </div>
+        <div class="teclas">
+            <button class="blank">&nbsp;</button>
+            <button class="command" onclick="calcularResultado('x²')">x²</button>
+            <button class="command" onclick="calcularResultado('²√x')">²√x</button>
+            <button class="command operador" onclick="calcularResultado('/')">÷</button>
+        </div>
+        <div class="teclas">
+            <button class="number" onclick="preencherVisor('7')">7</button>
+            <button class="number" onclick="preencherVisor('8')">8</button>
+            <button class="number" onclick="preencherVisor('9')">9</button>
+            <button class="command operador" onclick="calcularResultado('*')">x</button>
+        </div>
+        <div class="teclas">
+            <button class="number" onclick="preencherVisor('4')">4</button>
+            <button class="number" onclick="preencherVisor('5')">5</button>
+            <button class="number" onclick="preencherVisor('6')">6</button>
+            <button class="command operador" onclick="calcularResultado('-')">-</button>
+        </div>
+        <div class="teclas">
+            <button class="number" onclick="preencherVisor('1')">1</button>
+            <button class="number" onclick="preencherVisor('2')">2</button>
+            <button class="number" onclick="preencherVisor('3')">3</button>
+            <button class="command operador" onclick="calcularResultado('+')">+</button>
+        </div>
+        <div class="teclas">
+            <button class="blank">&nbsp;</button>
+            <button class="number" onclick="preencherVisor('0')">0</button>
+            <button class="number" onclick="preencherVisor('.')">.</button>
+            <button class="equal" onclick="exibirResultado(); bloquearSinal()">=</button>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
